@@ -1,0 +1,26 @@
+{
+  "name": "nucleo",
+  "version": "1.0.0",
+  "description": "Coração do projeto de automacao residencial",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run prestart && node ./dist/index.js dotenv_config_path=dev.env",
+    "prebuild": "rm -rf dist",
+    "build": "tsc -p .",
+    "build:watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vitor Baggi",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.3.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mocha": "^8.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11"
+  }
+}
